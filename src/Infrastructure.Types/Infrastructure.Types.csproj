@@ -40,6 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Event\IWeakEventHandler.cs" />
+    <Compile Include="Event\EventHandlerUtils.cs" />
+    <Compile Include="Event\UnregisterCallback.cs" />
+    <Compile Include="Event\WeakEventHandler.cs" />
     <Compile Include="Options\None.cs" />
     <Compile Include="Options\Option.cs" />
     <Compile Include="Options\Some.cs" />
