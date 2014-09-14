@@ -10,7 +10,7 @@ namespace Infrastructure.Logging.Log4Net
 	{
 		static Log4NetLoggerFactory()
 		{
-			LoggerFactory.SetCurrent(new Log4NetLoggerFactory());
+		    log4net.Config.XmlConfigurator.Configure();
 		}
 
 		/// <summary>

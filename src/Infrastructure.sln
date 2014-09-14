@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Logging", "Infrastructure.Logging\Infrastructure.Logging.csproj", "{18E5FC3B-00D8-4B23-ABFB-B4842FF00111}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Types", "Infrastructure.Types\Infrastructure.Types.csproj", "{81FF7601-200B-4AAB-928E-93CBEAFA91F8}"
@@ -27,10 +29,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.WindowsServi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Requirements", "Infrastructure.Requirements\Infrastructure.Requirements.csproj", "{AA5C518A-BAC1-40E4-BB27-20429A3AFB3B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Configuration", "Infrastructure.Configuration\Infrastructure.Configuration.csproj", "{2C63A8AC-A2FA-44E6-9C8C-F833183BCE50}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DBF6487B-6F6E-4291-B1B5-1226519AF290}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = Infrastructure.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -72,8 +80,15 @@ Global
 		{AA5C518A-BAC1-40E4-BB27-20429A3AFB3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA5C518A-BAC1-40E4-BB27-20429A3AFB3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA5C518A-BAC1-40E4-BB27-20429A3AFB3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C63A8AC-A2FA-44E6-9C8C-F833183BCE50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C63A8AC-A2FA-44E6-9C8C-F833183BCE50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C63A8AC-A2FA-44E6-9C8C-F833183BCE50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C63A8AC-A2FA-44E6-9C8C-F833183BCE50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Infrastructure.vsmdi
 	EndGlobalSection
 EndGlobal
