@@ -25,7 +25,7 @@ namespace Infrastructure.Configuration
         }
         private void setString(string key, string val)
         {
-            var path = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            var path = System.Reflection.Assembly.GetEntryAssembly().Location;
             var config = ConfigurationManager.OpenExeConfiguration(path);
 
             config.AppSettings.Settings.Remove(key);

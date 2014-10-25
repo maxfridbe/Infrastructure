@@ -37,7 +37,7 @@ namespace Infrastructure.Security
     /// www: http://crackstation.net/hashing-security.htm
     /// Compatibility: .NET 3.0 and later.
     /// </summary>
-    public class PasswordHash
+    public class PBKDF2PasswordHashProvider : IPasswordHashProvider
     {
         // The following constants may be changed without breaking existing hashes.
         public const int SALT_BYTE_SIZE = 24;
@@ -53,7 +53,7 @@ namespace Infrastructure.Security
         /// </summary>
         /// <param name="password">The password to hash.</param>
         /// <returns>The hash of the password.</returns>
-        public static string CreateHash(string password)
+        public string CreatePasswordHash(string password)
         {
             // Generate a random salt
             RNGCryptoServiceProvider csprng = new RNGCryptoServiceProvider();
@@ -73,7 +73,7 @@ namespace Infrastructure.Security
         /// <param name="password">The password to check.</param>
         /// <param name="correctHash">A hash of the correct password.</param>
         /// <returns>True if the password is correct. False otherwise.</returns>
-        public static bool ValidatePassword(string password, string correctHash)
+        public bool ValidatePassword(string password, string correctHash)
         {
             // Extract the parameters from the hash
             char[] delimiter = { ':' };
